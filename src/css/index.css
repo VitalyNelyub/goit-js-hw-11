@@ -1,0 +1,27 @@
+.header {
+  background-color: rgb(43, 146, 136);
+  height: 75px;
+}
+
+.search-form {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.search-form input {
+  border: 3px solid rgb(214, 125, 9);
+  border-radius: 11px;
+  font-size: 20px;
+  color: blue;
+  outline: none;
+}
+
+button {
+  color: blue;
+  font-size: 20px;
+  background-color: lime;
+  border: 3px solid rgb(214, 125, 9);
+  border-radius: 11px;
+  margin-left: 15px;
+}
