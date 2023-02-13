@@ -10,11 +10,11 @@ form.addEventListener('submit', getValue);
 function getValue(e) {
   e.preventDefault();
   // const URL = `https://pixabay.com/api/?key=33583955-ce9811140fd4e045deb42856a&q=${valueFromInput}&image_type=photo&orientation=horizontal&safesearch=true`;
-  valueFromInput = formInputValue.value;
-  console.log(valueFromInput);
+  // valueFromInput = formInputValue.value;
+  // console.log(valueFromInput);
   axios
     .get(
-      `https://pixabay.com/api/?key=33583955-ce9811140fd4e045deb42856a&q=${valueFromInput}&image_type=photo&orientation=horizontal&safesearch=true`
+      `https://pixabay.com/api/?key=33583955-ce9811140fd4e045deb42856a&q=${formInputValue.value}&image_type=photo&orientation=horizontal&safesearch=true`
     )
     .then(response => {
       response.data.hits;

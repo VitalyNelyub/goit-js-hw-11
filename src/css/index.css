@@ -1,12 +1,18 @@
+body {
+  background-color: rgba(179, 167, 167, 0.692);
+}
+
 .header {
-  background-color: rgb(43, 146, 136);
+  background-color: rgba(60, 170, 159, 0.788);
   height: 75px;
+  margin-bottom: 45px;
 }
 
 .search-form {
   width: 400px;
   margin: 0 auto;
   padding: 20px;
+  
 }
 
 .search-form input {
@@ -44,6 +50,7 @@ font-size: 30px;
 .photo-card img {
   width: 400px;
   height: 300px;
+  border: 1px solid gray;
 }
 
 .info {
@@ -51,4 +58,5 @@ font-size: 30px;
   display: flex;
   gap: 20px;
   justify-content: center;
+   border: 1px solid gray;
 }
