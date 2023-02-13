@@ -4,40 +4,29 @@ const axios = require('axios').default;
 const form = document.getElementById('search-form');
 const formInputValue = document.querySelector('.search-form input');
 const cardList = document.querySelector('.gallery');
+const loadMoreBtn = document.querySelector('.load-more');
+
 // console.log(formInputValue.value);
 form.addEventListener('submit', getValue);
+// loadMore.addEventListener('click', loadMoreCards)
 
 function getValue(e) {
   e.preventDefault();
-  // const URL = `https://pixabay.com/api/?key=33583955-ce9811140fd4e045deb42856a&q=${valueFromInput}&image_type=photo&orientation=horizontal&safesearch=true`;
-  // valueFromInput = formInputValue.value;
-  // console.log(valueFromInput);
-  axios
-    .get(
-      `https://pixabay.com/api/?key=33583955-ce9811140fd4e045deb42856a&q=${formInputValue.value}&image_type=photo&orientation=horizontal&safesearch=true`
-    )
-    .then(response => {
-      response.data.hits;
-      console.log(response.data.hits);
+  const URL = `https://pixabay.com/api/?key=33583955-ce9811140fd4e045deb42856a&q=${formInputValue.value}&image_type=photo&orientation=horizontal&safesearch=true&per_page=4&page=1`;
+
+  axios.get(URL).then(response => {
+    response.data.hits;
+    console.log(response.data.hits);
+    if (response.data.hits.length === 0 || formInputValue.value === '') {
+      Notiflix.Notify.failure(
+        'Sorry, there are no images matching your search query. Please try again.'
+      );
+    } else {
       renderGallery(response.data.hits);
-    });
+      formInputValue.value = '';
+    }
+  });
 }
-
-// const URL = `https://pixabay.com/api/?key=33583955-ce9811140fd4e045deb42856a&q=${valueFromInput}&image_type=photo&orientation=horizontal&safesearch=true`;
-
-// let valueFromInput = null;
-// fetchPhoto()
-
-// axios
-//   .get(URL)
-//   .then(response => {
-//     response.data.hits;
-//     console.log(response.data.hits);
-//     renderGallery(response.data.hits);
-//   })
-//   ;
-
-// renderGallery();
 
 function renderGallery(hits) {
   hits.map(hits => {
