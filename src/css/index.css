@@ -25,3 +25,30 @@ button {
   border-radius: 11px;
   margin-left: 15px;
 }
+
+.load-more {
+margin: 0 auto;
+display: block;
+margin-top: 20px;
+font-size: 30px;
+}
+
+.gallery {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.photo-card img {
+  width: 400px;
+  height: 300px;
+}
+
+.info {
+  font-size: 12px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
