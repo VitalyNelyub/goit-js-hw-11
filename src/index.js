@@ -48,7 +48,9 @@ function renderCards(backData) {
   const cardForRender = dataPhotoArray
     .map(
       dataPhotoArray => `<div class="photo-card">
-    <a class="gallery__item" href="${dataPhotoArray.largeImageURL}"><img src="${dataPhotoArray.webformatURL}" alt="${dataPhotoArray.tags.toUpperCase()}" loading="lazy" /></a>
+    <a class="gallery__item" href="${dataPhotoArray.largeImageURL}"><img src="${
+        dataPhotoArray.webformatURL
+      }" alt="${dataPhotoArray.tags.toUpperCase()}" loading="lazy" /></a>
   <div class="info">
     <p class="info-item">
       <b>Likes ${dataPhotoArray.likes}</b>
@@ -77,12 +79,11 @@ function renderCards(backData) {
   lightBox.refresh();
 }
 
-function loadMoreCards() {
-  axios
-    .get(
-      `https://pixabay.com/api/?key=33583955-ce9811140fd4e045deb42856a&q=${inputCurrentValue}&image_type=photo&orientation=horizontal&safesearch=true&per_page=40&page=${page}`
-    )
-    .then(backData => renderCards(backData));
+async function loadMoreCards() {
+  const backData = await axios.get(
+    `https://pixabay.com/api/?key=33583955-ce9811140fd4e045deb42856a&q=${inputCurrentValue}&image_type=photo&orientation=horizontal&safesearch=true&per_page=40&page=${page}`
+  );
+  renderCards(backData)
 }
 
 let lightBox = new SimpleLightbox('.gallery a', {
