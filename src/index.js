@@ -48,7 +48,7 @@ function renderCards(backData) {
   const cardForRender = dataPhotoArray
     .map(
       dataPhotoArray => `<div class="photo-card">
-    <a class="gallery__item" href="${dataPhotoArray.largeImageURL}"><img src="${dataPhotoArray.webformatURL}" alt="${dataPhotoArray.tags}" loading="lazy" /></a>
+    <a class="gallery__item" href="${dataPhotoArray.largeImageURL}"><img src="${dataPhotoArray.webformatURL}" alt="${dataPhotoArray.tags.toUpperCase()}" loading="lazy" /></a>
   <div class="info">
     <p class="info-item">
       <b>Likes ${dataPhotoArray.likes}</b>
