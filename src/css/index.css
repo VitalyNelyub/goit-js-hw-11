@@ -1,4 +1,6 @@
 body {
+  padding-top: 100px;
+  padding-bottom: 50px;
   background-color: rgba(179, 167, 167, 0.692);
 }
 
@@ -6,6 +8,12 @@ body {
   background-color: rgba(60, 170, 159, 0.788);
   height: 75px;
   margin-bottom: 45px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .search-form {
