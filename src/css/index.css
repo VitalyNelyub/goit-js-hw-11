@@ -48,6 +48,8 @@ input ~ button {
   border: 3px solid rgb(100, 86, 68);
   background-color: lime;
   color: blue;
+  box-shadow: 0px 1px 30px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 10px 2px 10px 10px rgba(0, 0, 0, 0.12);
 }
 
 .gallery {
