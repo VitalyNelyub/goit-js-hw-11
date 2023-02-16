@@ -5,7 +5,7 @@ body {
 }
 
 .header {
-  background-color: rgba(60, 170, 159, 0.788);
+  background-color: rgba(22, 194, 36, 0.788);
   height: 75px;
   margin-bottom: 45px;
 }
@@ -33,7 +33,7 @@ body {
 input ~ button {
   color: blue;
   font-size: 20px;
-  background-color: lime;
+  background-color: rgb(215, 230, 10);
   border: 3px solid rgb(100, 86, 68);
   border-radius: 11px;
   margin-left: 15px;
@@ -46,16 +46,18 @@ input ~ button {
   font-size: 30px;
   border-radius: 11px;
   border: 3px solid rgb(100, 86, 68);
-  background-color: lime;
+  background-color: rgb(215, 230, 10);
   color: blue;
-  box-shadow: 0px 1px 30px 0px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 10px 2px 10px 10px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 2px 15px 10px rgba(42, 209, 27, 0.568);
+  /* box-shadow: 0px 1px 30px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 10px 2px 10px 10px rgba(0, 0, 0, 0.12); */
 }
 
 .gallery {
   width: 100%;
   display: flex;
-  gap: 15px;
+  gap: 30px;
+  row-gap: 60px;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -65,8 +67,7 @@ input ~ button {
   height: 300px;
   border: 1px solid gray;
   border-radius: 7px;
-  box-shadow: 0px 1px 30px 0px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 10px 2px 10px 10px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 2px 15px 10px rgba(42, 209, 27, 0.568);
 }
 
 .info {
@@ -76,9 +77,8 @@ input ~ button {
   justify-content: center;
   border: 1px solid gray;
   border-radius: 7px;
-  color: blue;
-  box-shadow: 0px 1px 30px 0px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 10px 2px 10px 10px rgba(0, 0, 0, 0.12);
+  color: black;
+  box-shadow: 0px 2px 15px 10px rgba(42, 209, 27, 0.568);
 }
 
 .is-hidden {
