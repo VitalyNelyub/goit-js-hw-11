@@ -11,7 +11,6 @@ const loadMoreBtn = document.querySelector('.load-more');
 
 let page = 1;
 let inputCurrentValue = '';
-loadMoreBtn.disabled = true;
 
 form.addEventListener('submit', getFetch);
 loadMoreBtn.addEventListener('click', loadMoreCards);
@@ -30,10 +29,10 @@ async function getFetch(e) {
       );
       formInputValue.value = '';
     } else {
-      loadMoreBtn.disabled = false;
       inputCurrentValue = formInputValue.value;
       formInputValue.value = '';
       renderCards(backData);
+      loadMoreBtn.classList.remove('is-hidden')
     }
   } else {
     Notiflix.Notify.failure(
